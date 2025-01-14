@@ -1,10 +1,10 @@
 package com.exemple.app;
 
-
 import com.exemple.geometry.Circle;
 import com.exemple.geometry.Rectangle;
 import com.exemple.geometry.Triangle;
 import com.exemple.geometry.utils.GeometryHelper;
+import com.exemple.geometry.threedimensionalshapes.Sphere;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +12,7 @@ public class Main {
         Circle circle = new Circle(7);
         Rectangle rectangle = new Rectangle(8, 12);
         Triangle triangle = new Triangle(5, 5, 8);
+        Sphere sphere = new Sphere(5);
 
         // Выводим информацию о фигурах
         System.out.println("--- Круг ---");
@@ -30,6 +31,12 @@ public class Main {
         System.out.println(triangle.toString());
         System.out.println("Площадь: " + triangle.calculateArea());
         System.out.println("Периметр: " + triangle.calculatePerimeter());
+        System.out.println();
+
+        System.out.println("--- Сфера ---");
+        System.out.println(sphere.toString());
+        System.out.println("Площадь поверхности: " + sphere.calculateSurfaceArea());
+        System.out.println("Объем: " + sphere.calculateVolume());
         System.out.println();
 
         // Используем GeometryHelper
